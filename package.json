@@ -1,0 +1,29 @@
+{
+  "name": "simpleytuploader",
+  "version": "1.0.1",
+  "dependencies": {
+    "puppeteer": "19.0.0",
+    "puppeteer-extra": "^3.3.4",
+    "puppeteer-extra-plugin-stealth": "^2.11.1",
+    "user-agents": "^1.0.1174"
+  },
+  "description": "upload short videos to youtube",
+  "main": "login.js",
+  "scripts": {
+    "test": "node upload.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karim0sec/SimpleYTUploader.git"
+  },
+  "keywords": [
+    "youtube-uploader",
+    "auto upload youtube"
+  ],
+  "author": "Karim Elsayed",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/karim0sec/SimpleYTUploader/issues"
+  },
+  "homepage": "https://github.com/karim0sec/SimpleYTUploader#readme"
+}
