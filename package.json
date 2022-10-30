@@ -1,11 +1,10 @@
 {
   "name": "simpleytuploader",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "dependencies": {
-    "puppeteer": "19.0.0",
+    "puppeteer": "^19.0.0",
     "puppeteer-extra": "^3.3.4",
-    "puppeteer-extra-plugin-stealth": "^2.11.1",
-    "user-agents": "^1.0.1174"
+    "puppeteer-extra-plugin-stealth": "^2.11.1"
   },
   "description": "upload short videos to youtube",
   "main": "login.js",

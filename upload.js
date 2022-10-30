@@ -1,5 +1,4 @@
 const fs = require("fs");
-const UserAgent =  require('user-agents');
 // load puppeteer
 const puppeteer = require("puppeteer-extra");
 const stealthPlugin = require("puppeteer-extra-plugin-stealth")();
@@ -7,9 +6,9 @@ const stealthPlugin = require("puppeteer-extra-plugin-stealth")();
   stealthPlugin.enabledEvasions.delete(a)
 );
 
-const userAgent = new UserAgent({ platform: 'Win32' }).toString();
-const window_height = 700 + Math.floor(Math.random() * 100) ;
-const window_width = 1300 + Math.floor(Math.random() * 100) ;
+const userAgent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26';
+const window_height =  768 //700 + Math.floor(Math.random() * 100) ;
+const window_width = 1366 // + Math.floor(Math.random() * 100) ;
 const studio_url = "https://studio.youtube.com/";
 
 // directory contains the videos you want to upload
@@ -63,7 +62,7 @@ try {
         const browser = await puppeteer.launch(
             {
                 'headless': true,    // have window
-                executablePath: null,
+                executablePath: require("puppeteer").executablePath(),
                 userDataDir: chrome_user_data_directory,
                 ignoreDefaultArgs: DEFAULT_ARGS,
                 autoClose: false,

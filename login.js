@@ -1,4 +1,3 @@
-const UserAgent =  require('user-agents');
 const puppeteer = require("puppeteer-extra");
 const stealthPlugin = require("puppeteer-extra-plugin-stealth")();
 ["chrome.runtime", "navigator.languages","iframe.contentWindow","navigator.plugins"].forEach(a =>
@@ -10,7 +9,7 @@ const chrome_user_data_directory = "./profile/";
 const window_height = 768;
 const window_width = 1366;
 const studio_url = "https://studio.youtube.com/";
-const userAgent = new UserAgent({ platform: 'Win32' }).toString();
+const userAgent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26';
 
 const DEFAULT_ARGS = [
   '--disable-background-networking',
@@ -45,7 +44,7 @@ async function main() {
 const browser = await puppeteer.launch(
             {
                 'headless': false,    // have window
-                executablePath: null,
+                executablePath: require("puppeteer").executablePath(),
                 userDataDir: chrome_user_data_directory,
                 ignoreDefaultArgs: DEFAULT_ARGS,
                 autoClose: false,
